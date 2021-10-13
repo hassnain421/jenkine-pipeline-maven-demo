@@ -9,7 +9,7 @@ node {
   stage ('SonarQube Analysis') {
     def scannerHome = tool 'sonarqube';
     withSonarQubeEnv('sonarqube') {
-      sh """$(scannerHome)/bin/sonar-scanner \
+      sh """${scannerHome}/bin/sonar-scanner \
       -D sonar.login = admin \
       -D sonar.password = 1234 \
       -D sonarBaseDir = var/lib/jenkins/workspace/maven/ \
