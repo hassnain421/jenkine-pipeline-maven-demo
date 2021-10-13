@@ -7,7 +7,7 @@ node {
     sh 'mvn clean install'    
   }
   stage ('SonarQube Analysis') {
-    def scannerHome = tool 'sonarqube'
+    def scannerHome = tool 'sonarqube';
     withSonarQubeEnv('sonarqube') {
       sh """$(scannerHome)/sonarqube/bin/sonar-scanner \
       -D sonar.login = admin \
