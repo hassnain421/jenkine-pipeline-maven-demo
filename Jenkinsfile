@@ -10,8 +10,7 @@ node {
   stage('SonarQube Analysis') {
     def mvn = tool 'maven';
     withSonarQubeEnv() {
-      /*sh "${mvn}/bin/mvn clean verify sonar:sonar"*/
-      echo "${mvn}"
+      sh "${mvn}/bin/mvn clean verify sonar:sonar"
     }
   }
   /*stage ('SonarQube Analysis') {
