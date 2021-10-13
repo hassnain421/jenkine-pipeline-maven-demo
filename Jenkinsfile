@@ -13,7 +13,8 @@ node {
       -D sonar.login = admin \
       -D sonar.password = 1234 \
       -D sonarBaseDir = var/lib/jenkins/workspace/maven/ \
-      -D sonar.projectKey = maven \
+      -D sonar.projectKey = testmaven \
+      -D sonar.projectVersion=1.0 \
       -D sonar.sources= /var/lib/jenkins/workspace/maven/src/main
       -D sonar.tests= /var/lib/jenkins/workspace/maven/src/test
       -D sonar.host.url=http://143.198.7.75:9000/"""
