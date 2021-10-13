@@ -10,12 +10,12 @@ node {
     def scannerHome = tool 'sonarqube';
     withSonarQubeEnv('sonarqube') {
       sh """${scannerHome}/bin/sonar-scanner \
-      -Dsonar.login = admin \
-      -Dsonar.password = 1234 \
-      -DsonarBaseDir = var/lib/jenkins/workspace/maven/ \
-      -Dsonar.projectKey = testmaven \
-      -Dsonar.sources=. \
-      -Dsonar.host.url=http://143.198.7.75:9000/"""
+      -D sonar.login = admin \
+      -D sonar.password = 1234 \
+      -D sonarBaseDir = var/lib/jenkins/workspace/maven/ \
+      -D sonar.projectKey = testmaven \
+      -D sonar.sources=. \
+      -D sonar.host.url=http://143.198.7.75:9000/"""
     }
   }
 }
