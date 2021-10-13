@@ -14,7 +14,7 @@ node {
       -D sonar.password = 1234 \
       -D sonarBaseDir = var/lib/jenkins/workspace/maven/ \
       -D sonar.projectKey = maven \
-      -D sonar.tests= /var/lib/jenkins/workspace/maven/src/main
+      -D sonar.sources= /var/lib/jenkins/workspace/maven/src/main
       -D sonar.tests= /var/lib/jenkins/workspace/maven/src/test
       -D sonar.host.url=http://143.198.7.75:9000/"""
     }
