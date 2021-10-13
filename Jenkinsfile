@@ -3,7 +3,7 @@ node {
     git 'https://github.com/hassnain421/jenkine-pipeline-maven-demo.git'
   }
   stage ('Execute Maven') {
-    tool name: 'maven', type: 'mav'
+    mvnHome = tool 'maven'
     sh 'mvn clean install'    
   }
   stage ('SonarQube Analysis') {
