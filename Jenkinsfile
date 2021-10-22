@@ -22,7 +22,6 @@ node {
       -D sonar.projectKey = maven \
       -D sonar.projectBaseDir=/var/lib/jenkins/workspace/maven/ \
       -D sonar.sources= maven/src/main/ \
-      -D sonar.tests= maven/src/test/ \
       -D sonar.host.url=http://192.168.161.130:9000/"
     }
   }
