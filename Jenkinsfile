@@ -6,14 +6,14 @@ node {
     mvnHome = tool 'maven'
     sh 'mvn clean install'    
   }
-  
+   /*
   stage('SonarQube Analysis') {
     def mvn = tool 'maven';
     withSonarQubeEnv() {
       sh "${mvn}/bin/mvn clean verify sonar:sonar"
     }
   }
-  /*stage ('SonarQube Analysis') {
+ stage ('SonarQube Analysis') {
     def scannerHome = tool 'sonarqube';
     withSonarQubeEnv('sonarqube') {
       sh """${scannerHome}/bin/sonar-scanner \
