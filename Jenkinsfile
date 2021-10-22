@@ -11,8 +11,8 @@ node {
     def mvn = tool 'maven';
     withSonarQubeEnv() {
       sh "${mvn}/bin/mvn clean verify sonar:sonar"
-    }*/
-  }
+    }
+  }*/
  stage ('SonarQube Analysis') {
     def scannerHome = tool 'sonarqube';
     withSonarQubeEnv('sonarqube') {
