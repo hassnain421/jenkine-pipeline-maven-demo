@@ -16,8 +16,7 @@ node {
  stage ('SonarQube Analysis') {
     def scannerHome = tool 'sonarqube';
     withSonarQubeEnv('sonarqube') {
-      sh "${scannerHome}/bin/sonar-scanner \
-      -D sonar.projectVersion=1.0-SNAPSHOT \      
+      sh "${scannerHome}/bin/sonar-scanner \     
       -D sonar.login=admin \
       -D sonar.password=12345 \
       -D sonar.projectKey=maven2 \
