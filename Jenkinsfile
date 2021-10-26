@@ -25,5 +25,10 @@ node {
       -D sonar.host.url=http://192.168.161.133:9000/"
     }
   }
+  stage("Quality Gate") {
+        timeout(time: 1, unit: 'HOURS') {
+            waitForQualityGate abortPipeline: true
+        }
+  }
   
 }
