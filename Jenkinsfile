@@ -18,11 +18,11 @@ node {
     withSonarQubeEnv('sonarqube') {
       sh "${scannerHome}/bin/sonar-scanner \
       -D sonar.login = admin \
-      -D sonar.password = 1234 \
-      -D sonar.projectKey = maven \
-      -D sonar.projectBaseDir=/var/lib/jenkins/workspace/maven/ \
-      -D sonar.sources= maven/src/main/ \
-      -D sonar.host.url=http://192.168.161.130:9000/"
+      -D sonar.password = 12345 \
+      -D sonar.projectKey = maven2 \
+      -D sonar.sources=/var/lib/jenkins/workspace/maven/src/main/ \
+      -D sonar.sources=/var/lib/jenkins/workspace/maven/src/test/ \
+      -D sonar.host.url=http://192.168.161.133:9000/"
     }
   }
   
