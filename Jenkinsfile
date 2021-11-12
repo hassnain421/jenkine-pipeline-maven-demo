@@ -1,18 +1,17 @@
 node {
   stage ('Cloning from Git') {
     git 'https://github.com/hassnain421/jenkine-pipeline-maven-demo.git'
-  }
+  }/*
   stage ('Execute Maven') {
     mvnHome = tool 'maven'
     sh 'mvn clean install'    
-  }
-/*
+  }*/
   stage('SonarQube Analysis') {
     def mvn = tool 'maven';
     withSonarQubeEnv() {
       sh "${mvn}/bin/mvn clean verify sonar:sonar"
     }
-  }*/
+  }
  stage ('SonarQube Analysis') {
     def scannerHome = tool 'sonarqube';
     withSonarQubeEnv('sonarqube') {
