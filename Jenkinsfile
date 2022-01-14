@@ -16,6 +16,7 @@ node {
     def scannerHome = tool 'sonarqube';
     withSonarQubeEnv('sonarqube') {
       sh "${scannerHome}/bin/sonar-scanner \
+      -D sonar.sources=. \
       -D sonar.login=admin \
       -D sonar.password=admin123 \
       -D sonar.projectKey=test \
